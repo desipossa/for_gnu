@@ -57,6 +57,7 @@ h5,
 h6 {
     font-size: inherit;
     font-weight: inherit;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 button,
@@ -78,5 +79,18 @@ textarea {
 }
 
 .dot_list>* {
+    position: relative;
     line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 0 24px;
+}
+
+.dot_list>*::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 2px;
+    width: 2px;
+    height: 2px;
+    background: #0a96ba;
 }
