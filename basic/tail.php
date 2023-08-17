@@ -12,6 +12,13 @@ if(G5_COMMUNITY_USE === false) {
 }
 ?>
 
+<?php
+    if(!defined('_INDEX_')) { // index가 아닐 때만 실행
+        include G5_THEME_PATH.'/sub_tail.php'; // 파일 집어넣기
+    }
+    ?>
+
+
 <footer id="footer" class="footer sec">
     <div class="inner">
         <div class="addr">부산광역시 북구 만덕2로 14 상가동 제314호</div>

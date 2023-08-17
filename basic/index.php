@@ -118,15 +118,22 @@ include_once(G5_THEME_PATH.'/head.php');
         <div class="inner">
             <div class="left">
                 <h3>부산아파트입주청소 공지
-                    <a href="">
+                    <a href="/bbs/board.php?bo_table=notice">
                         <span class="material-symbols-outlined">
                             add
                         </span>
                     </a>
                 </h3>
-
+                <div class="main_notice">
+                    <?php
+    // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
+    // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
+    // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
+	echo latest('theme/notice', 'notice', 3, 35);		// 최소설치시 자동생성되는 공지사항게시판
+    ?>
+                </div>
             </div>
-            <div class="center">
+            <!-- <div class="center">
                 <div class="movie_box">
                     <iframe src="https://www.youtube.com/embed/eOlZJDNKLCw"
                         title="&quot;VALHALLA&quot; | Most Epic Viking &amp; Nordic Rise Music | Danheim"
@@ -135,7 +142,7 @@ include_once(G5_THEME_PATH.'/head.php');
                         allowfullscreen></iframe>
                 </div>
 
-            </div>
+            </div> -->
             <div class="right">
                 <div class="map_box">
                     <!-- * 카카오맵 - 지도퍼가기 -->
