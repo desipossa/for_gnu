@@ -64,6 +64,22 @@ body {
     font-weight: 500;
 }
 
+#gnb>ul>li {
+    position: relative;
+}
+
+#gnb>ul>li.on::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 10px;
+    height: 10px;
+    background: #0a96ba;
+    border-radius: 50%;
+}
+
 
 
 

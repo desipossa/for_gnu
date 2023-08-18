@@ -36,12 +36,39 @@ header("Pragma: no-cache"); // HTTP/1.0
 
 <head>
     <meta charset="utf-8">
+
+
+    <!--추가 meta tag-->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
+    <!--//추가 meta tag-->
+
+    <link rel="shortcut icon" href="<?=G5_THEME_URL;?>/images/favicon.png">
+
     <?php
 if (G5_IS_MOBILE) {
     echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">'.PHP_EOL;
     echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
     echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
 } else {
+    echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">'.PHP_EOL;
     echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
     echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">'.PHP_EOL;
 }
